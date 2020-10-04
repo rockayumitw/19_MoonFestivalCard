@@ -15,7 +15,6 @@ $(function(){
              now_top=$(".draggon-ui").position().top;
              
              if(now_top < 250){
-                 console.log('<250')
                  $(".dot-area").css({opacity:1});
                  revertDuration.draggable( "option", "revert", true);
              }else{
@@ -25,7 +24,6 @@ $(function(){
           },
           stop: function( event, ui ) {
              if(now_top < 250){
-                 console.log('stop')
                  $(".dot-area").css({opacity:1});
              }
           }
@@ -63,23 +61,25 @@ $(function(){
         let el = $('.sky-light-'+count)
         count++;
         var tl = new TimelineMax();
-        var xnum1=Math.floor((Math.random() * 20) + 78);
-        var yum1=Math.floor((Math.random() * 80) + 40);
-        var yum2=Math.floor((Math.random() * 100) + 100);
-        var rnum=Math.floor((Math.random() * 50) + 30);
-        var yum3=Math.floor((Math.random() * 100) + 200);
-        var xnum2=Math.floor((Math.random() * 20) + 50);
+        var x1=Math.floor((Math.random() * 20) + 78);
+        var x2=Math.floor((Math.random() * 20) + 50);
+
+        var y1=Math.floor((Math.random() * 80) + 40);
+        var y2=Math.floor((Math.random() * 100) + 100);
+        var y3=Math.floor((Math.random() * 100) + 200);
+
+        var rotationNum=Math.floor((Math.random() * 50) + 30);
 
         tl.to(el, 4, {
-            x:xnum1,
-            y:-yum1,
+            x: x1,
+            y:-y1,
             rotation:45,
             opacity:1
         });
         tl.to(el, 4, {
             scale:.8,
-            x:-xnum2,
-            y:-yum2,
+            x:-x2,
+            y:-y2,
             rotation:-2,
             delay:-1.2
         });
@@ -87,8 +87,8 @@ $(function(){
             x:120,
             opacity:0,
             scale:.5,
-            rotation:rnum,
-            y:-yum3,
+            rotation:rotationNum,
+            y:-y3,
             delay:-1.2
         });
     
