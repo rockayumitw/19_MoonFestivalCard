@@ -56,7 +56,7 @@ $(function(){
     // 天燈
     let count = 1
     $('.btn-sky-light').click(function(){
-        $(".sky-area").append('<img class="sky-light-'+count+'" src="./_img/sky-light.png" alt=""></img>');
+        $(".sky-area").append('<img class="sky-light-'+count+'" src="https://github.com/rockayumitw/19_MoonFestivalCard/blob/master/_img/sky-light.png?raw=true" alt=""></img>');
 
         let el = $('.sky-light-'+count)
         count++;
